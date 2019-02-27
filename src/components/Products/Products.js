@@ -4,7 +4,7 @@ import ProductItem from './Product-Item'
 export default class Products extends Component {
 
     componentDidMount() {
-        this.props.getAll("Product")
+        this.props.getAll("product")
     }
 
     render() {

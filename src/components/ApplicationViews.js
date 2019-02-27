@@ -21,7 +21,7 @@ export default class ApplicationViews extends Component {
         product_type: [],
         payment_type: [],
         customer: [],
-        Product: [],
+        product: [],
         order: [],
         training: [],
         computer: [],
@@ -67,7 +67,7 @@ export default class ApplicationViews extends Component {
             <Route exact path="/employees" render={(props) => { return <Employees {...props}/> }} />
             <Route exact path="/producttypes" render={(props) => { return <ProductTypes {...props}/> }} />
             <Route exact path="/customers" render={(props) => { return <Customers {...props}/> }} />
-            <Route exact path="/products" render={(props) => { return <Products product={this.state.Product} getAll={this.getAll} {...props}/> }} />
+            <Route exact path="/products" render={(props) => { return <Products product={this.state.product} getAll={this.getAll} {...props}/> }} />
             <Route exact path="/trainings" render={(props) => { return <Trainings {...props}/> }} />
             <Route exact path="/computers" render={(props) => { return <Computers computer={this.state.computer} getAll={this.getAll} {...props}/> }} />
             <Route exact path="/departments" render={(props) => { return <Departments department={this.state.department} {...props} getAll={this.getAll}/> }} />
