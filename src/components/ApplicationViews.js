@@ -54,7 +54,7 @@ export default class ApplicationViews extends Component {
     return (
         <React.Fragment>
             <Route exact path="/" render={(props) => {
-                return <DepartmentComponent movies={this.state.movies} getAll={this.getAll}/>
+                return <DepartmentComponent department={this.state.department} getAll={this.getAll}/>
             }}/>
         </React.Fragment>
       
