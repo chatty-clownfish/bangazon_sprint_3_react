@@ -36,9 +36,9 @@ clearSessionStorage(){
 render() {
     return (
 <nav className="navbar navbar-expand-lg navbar-light bg-light navbar">
-    <UncontrolledDropdown nav inNavbar>
+    <UncontrolledDropdown inNavbar>
                 <DropdownToggle nav caret>
-                <h2>Sprint 3</h2>
+                <h2>Death Star 711 API</h2>
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>

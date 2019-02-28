@@ -66,24 +66,20 @@ export default class ApplicationViews extends Component {
             <Route exact path="/orders" render={(props) => { return <Orders order={this.state.order} customers={this.state.customer} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/employees" render={(props) => { return <Employees {...props} employee={this.state.employee} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/producttypes" render={(props) => { return <ProductTypes producttypes={this.state.producttype} getAll={this.getAll} {...props}/>}} />
-            <Route exact path="/customers" render={(props) => { return <Customers {...props}/> }} />
-            <Route exact path="/products" render={(props) => { return <Products {...props}/> }} />
+            <Route exact path="/customers" render={(props) => { return <Customers customers={this.state.customer} getAll={this.getAll} {...props}/> }} />
+            <Route exact path="/products" render={(props) => { return <Products product={this.state.product} getAll={this.getAll} {...props}/> }} />
+            <Route exact path="/computers" render={(props) => { return <Computers computer={this.state.computer} getAll={this.getAll} {...props}/> }} />
             <Route exact path="/trainings" render={(props) => {
                 return <Trainings {...props}
                 training={this.state.training}
                 getAll={this.getAll}
                 /> }} />
-
-            <Route exact path="/computers" render={(props) => { return <Computers {...props}/> }} />
             <Route exact path="/departments" render={(props) => { return <Departments department={this.state.department} {...props} getAll={this.getAll}/> }} />
-
             <Route exact path="/paymenttypes" render={(props) => {
                  return <PaymentTypes {...props}
                  paymenttype={this.state.paymenttype}
                  getAll={this.getAll}
                  /> }} />
-
-
         </React.Fragment>
     )
   }
