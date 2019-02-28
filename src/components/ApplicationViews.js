@@ -32,7 +32,7 @@ export default class ApplicationViews extends Component {
     setEmployeeState = (employee) => this.setState({employee})
     setProductTypeState = (product_type) => this.setState({product_type})
     setProductTypeState = (product_type) => this.setState({product_type})
-    setPaymentTypeState = (payment_type) => this.setState({payment_type})
+    // setPaymentTypeState = (payment_type) => this.setState({payment_type})
     setCustomerState = (customer) => this.setState({customer})
     setProductState = (product) => this.setState({product})
     setOrderState = (order) => this.setState({order})
@@ -74,10 +74,15 @@ export default class ApplicationViews extends Component {
                 training={this.state.training}
                 getAll={this.getAll}
                 /> }} />
-                
+
             <Route exact path="/computers" render={(props) => { return <Computers {...props}/> }} />
             <Route exact path="/departments" render={(props) => { return <Departments department={this.state.department} {...props} getAll={this.getAll}/> }} />
-            <Route exact path="/paymenttypes" render={(props) => { return <PaymentTypes {...props}/> }} />
+
+            <Route exact path="/paymenttypes" render={(props) => {
+                 return <PaymentTypes {...props}
+                 payment_type={this.state.payment_type} 
+                 getAll={this.getAll}
+                 /> }} />
 
 
         </React.Fragment>
