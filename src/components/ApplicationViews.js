@@ -28,17 +28,6 @@ export default class ApplicationViews extends Component {
         apiUrl: 'http://127.0.0.1:8000/'
       }
 
-    setDepartmentState = (department) => this.setState({department})
-    setEmployeeState = (employee) => this.setState({employee})
-    setProductTypeState = (product_type) => this.setState({product_type})
-    setProductTypeState = (product_type) => this.setState({product_type})
-    // setPaymentTypeState = (payment_type) => this.setState({payment_type})
-    setCustomerState = (customer) => this.setState({customer})
-    setProductState = (product) => this.setState({product})
-    setOrderState = (order) => this.setState({order})
-    setTrainingState = (training) => this.setState({training})
-    setComputerState = (computer) => this.setState({computer})
-
 
     getAll = (resource, keyword=null) => {
         let url = `${this.state.apiUrl}${resource}/`
