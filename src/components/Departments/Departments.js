@@ -14,7 +14,7 @@ class Departments extends Component {
 
     return (
       <div className="department-container">
-        <h2>A list of departments</h2>
+        <h2>Departments</h2>
         <ul>{departmentNode}</ul>
       </div>
     )

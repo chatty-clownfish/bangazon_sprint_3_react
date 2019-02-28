@@ -14,7 +14,7 @@ export default class Computers extends Component {
 
         return (
             <div className="computer-container">
-                <h2>A list of Computers</h2>
+                <h2>Computers</h2>
                 <ul>{computerNode}</ul>
             </div>
         )
