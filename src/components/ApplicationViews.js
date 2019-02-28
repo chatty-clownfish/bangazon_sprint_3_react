@@ -64,7 +64,7 @@ export default class ApplicationViews extends Component {
         <React.Fragment>
             <NavBar />
             <Route exact path="/orders" render={(props) => { return <Orders {...props}/> }} />
-            <Route exact path="/employees" render={(props) => { return <Employees {...props}/> }} />
+            <Route exact path="/employees" render={(props) => { return <Employees {...props} employee={this.state.employee} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/producttypes" render={(props) => { return <ProductTypes {...props}/> }} />
             <Route exact path="/customers" render={(props) => { return <Customers {...props}/> }} />
             <Route exact path="/products" render={(props) => { return <Products {...props}/> }} />
