@@ -19,7 +19,7 @@ export default class ApplicationViews extends Component {
         department: [],
         employee: [],
         product_type: [],
-        payment_type: [],
+        paymenttype: [],
         customer: [],
         product: [],
         order: [],
@@ -80,7 +80,7 @@ export default class ApplicationViews extends Component {
 
             <Route exact path="/paymenttypes" render={(props) => {
                  return <PaymentTypes {...props}
-                 payment_type={this.state.payment_type} 
+                 paymenttype={this.state.paymenttype} 
                  getAll={this.getAll}
                  /> }} />
 

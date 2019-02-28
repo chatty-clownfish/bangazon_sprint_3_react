@@ -9,8 +9,8 @@ export default class PaymentTypes extends Component {
     }
 
     render() {
-        const paymenttypeNode = this.props.payment_type.map((payment_type) => {
-            return(<PaymentTypeList payment_type={payment_type} key={payment_type.id} />)
+        const paymenttypeNode = this.props.paymenttype.map((paymenttype) => {
+            return(<PaymentTypeList paymenttype={paymenttype} key={paymenttype.id} />)
         })
 
     return (

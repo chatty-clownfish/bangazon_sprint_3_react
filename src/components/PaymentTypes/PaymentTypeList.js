@@ -2,6 +2,6 @@ import React, { Component } from "react"
 
 export default class PaymentTypeList extends Component {
     render() {
-        return(<li>{this.props.payment_type.name}</li>)
+        return(<li>{this.props.paymenttype.name}</li>)
     }
 }
