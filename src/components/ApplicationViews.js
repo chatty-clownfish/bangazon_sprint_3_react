@@ -44,7 +44,7 @@ export default class ApplicationViews extends Component {
         let url = `${this.state.apiUrl}${resource}/`
         if (keyword)
           url += keyword
-    
+
         fetch(url)
         .then( response => response.json())
         .then( data => {
@@ -63,7 +63,7 @@ export default class ApplicationViews extends Component {
     return (
         <React.Fragment>
             <NavBar />
-            <Route exact path="/orders" render={(props) => { return <Orders {...props}/> }} />
+            <Route exact path="/orders" render={(props) => { return <Orders order={this.state.order} customers={this.state.customer} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/employees" render={(props) => { return <Employees {...props}/> }} />
             <Route exact path="/producttypes" render={(props) => { return <ProductTypes {...props}/> }} />
             <Route exact path="/customers" render={(props) => { return <Customers {...props}/> }} />

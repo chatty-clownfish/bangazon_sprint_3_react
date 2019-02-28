@@ -1,9 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
+import OrderItem from '../Orders/OrderItem'
 
-export default class Orders extends Component {
-    render() {
-        return (
-            <h1> Orders </h1>
-        )
-    }
+class Orders extends Component {
+
+
+  componentDidMount() {
+    this.props.getAll("order")
+  }
+
+  render() {
+    const OrderNode = this.props.order.map((order) => {
+        console.log(order.customer)
+      return (<OrderItem order={order} key={order.id} />)
+    })
+
+    return (
+      <div className="department-container">
+        <h2> Orders </h2>
+        <ul>{OrderNode}</ul>
+      </div>
+    )
+  }
 }
+
+export default Orders
