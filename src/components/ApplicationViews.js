@@ -19,7 +19,7 @@ export default class ApplicationViews extends Component {
         department: [],
         employee: [],
         product_type: [],
-        payment_type: [],
+        paymenttype: [],
         customer: [],
         product: [],
         order: [],
@@ -32,7 +32,7 @@ export default class ApplicationViews extends Component {
     setEmployeeState = (employee) => this.setState({employee})
     setProductTypeState = (product_type) => this.setState({product_type})
     setProductTypeState = (product_type) => this.setState({product_type})
-    setPaymentTypeState = (payment_type) => this.setState({payment_type})
+    // setPaymentTypeState = (payment_type) => this.setState({payment_type})
     setCustomerState = (customer) => this.setState({customer})
     setProductState = (product) => this.setState({product})
     setOrderState = (order) => this.setState({order})
@@ -64,16 +64,23 @@ export default class ApplicationViews extends Component {
         <React.Fragment>
             <NavBar />
             <Route exact path="/orders" render={(props) => { return <Orders {...props}/> }} />
-            <Route exact path="/employees" render={(props) => { return <Employees {...props}/> }} />
+            <Route exact path="/employees" render={(props) => { return <Employees {...props} employee={this.state.employee} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/producttypes" render={(props) => { return <ProductTypes {...props}/> }} />
             <Route exact path="/customers" render={(props) => { return <Customers {...props}/> }} />
             <Route exact path="/products" render={(props) => { return <Products product={this.state.product} getAll={this.getAll} {...props}/> }} />
             <Route exact path="/trainings" render={(props) => { return <Trainings {...props}/> }} />
             <Route exact path="/computers" render={(props) => { return <Computers computer={this.state.computer} getAll={this.getAll} {...props}/> }} />
+            <Route exact path="/trainings" render={(props) => {
+                return <Trainings {...props}
+                training={this.state.training}
+                getAll={this.getAll}
+                /> }} />
             <Route exact path="/departments" render={(props) => { return <Departments department={this.state.department} {...props} getAll={this.getAll}/> }} />
-            <Route exact path="/paymenttypes" render={(props) => { return <PaymentTypes {...props}/> }} />
-
-
+            <Route exact path="/paymenttypes" render={(props) => {
+                 return <PaymentTypes {...props}
+                 paymenttype={this.state.paymenttype}
+                 getAll={this.getAll}
+                 /> }} />
         </React.Fragment>
     )
   }
