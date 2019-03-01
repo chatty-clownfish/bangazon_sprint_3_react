@@ -14,7 +14,7 @@ class Employee extends Component {
 
     return (
       <div className="employees-container">
-        <h2>A list of employees</h2>
+        <h2>Employees</h2>
         <ul>{employeeNode}</ul>
       </div>
     )

@@ -29,7 +29,7 @@ export default class OrderItem extends Component {
   render() {
             return(
                 <ul>
-                    <li> Name: {this.state.customer.first_name} {this.state.customer.last_name}</li>
+                    <li>Name: {this.state.customer.first_name} {this.state.customer.last_name}</li>
                     <li> Payment: {this.state.payment.name}</li>
                     <br>
                     </br>

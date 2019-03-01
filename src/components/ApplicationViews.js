@@ -12,6 +12,7 @@ import Trainings from './Trainings/Trainings'
 import Computers from './Computers/Computers'
 import Departments from './Departments/Departments'
 import PaymentTypes from './PaymentTypes/PaymentTypes'
+import Home from './home/home'
 
 export default class ApplicationViews extends Component {
 
@@ -37,7 +38,6 @@ export default class ApplicationViews extends Component {
         fetch(url)
         .then( response => response.json())
         .then( data => {
-          console.log("Our Work", data)
           this.setState({[resource]: data})
         })
         .catch(err => console.log("Oops!", err))
@@ -52,6 +52,7 @@ export default class ApplicationViews extends Component {
     return (
         <React.Fragment>
             <NavBar />
+            <Route exact path="/" render={(props) => { return <Home {...props} /> }} />
             <Route exact path="/orders" render={(props) => { return <Orders order={this.state.order} customers={this.state.customer} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/employees" render={(props) => { return <Employees {...props} employee={this.state.employee} {...props} getAll={this.getAll}/> }} />
             <Route exact path="/producttypes" render={(props) => { return <ProductTypes producttypes={this.state.producttype} getAll={this.getAll} {...props}/>}} />
