@@ -14,7 +14,7 @@ export default class Products extends Component {
 
         return (
             <div className="product-container">
-                <h2>A list of Products</h2>
+                <h2>Products</h2>
                 <ul>{productNode}</ul>
             </div>
         )

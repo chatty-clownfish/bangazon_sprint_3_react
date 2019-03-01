@@ -10,7 +10,6 @@ class Orders extends Component {
 
   render() {
     const OrderNode = this.props.order.map((order) => {
-        console.log(order.customer)
       return (<OrderItem order={order} key={order.id} />)
     })
 
